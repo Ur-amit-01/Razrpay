@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Syllabus Tracker PDF | Comprehensive Study Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .payment-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            color: #1a2980;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .price-note {
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .payment-button-container {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .features {
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            background: #26d0ce;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h3 {
+            margin-bottom: 5px;
+            color: #1a2980;
+        }
+        
+        .guarantee {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .testimonial {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: "\201C";
+            font-size: 4rem;
+            color: #26d0ce;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #1a2980;
+        }
+        
+        .faq {
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #1a2980;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding-top: 10px;
+            display: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .price {
+                font-size: 2.8rem;
+            }
+        }
+        
+        .razorpay-embed-btn {
+            background-color: #2d8de3 !important;
+            color: white !important;
+            border-radius: 5px !important;
+            padding: 12px 24px !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+        }
+        
+        .whats-included {
+            margin-top: 30px;
+        }
+        
+        .included-list {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        
+        .included-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .included-list li:before {
+            content: "✓";
+            color: #26d0ce;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-book-medical"></i>
+            </div>
+            <h1>NEET Syllabus Tracker PDF</h1>
+            <p class="subtitle">Your ultimate study companion to systematically cover the entire NEET syllabus, track progress, and boost your preparation efficiency.</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <div class="product-info">
+                <h2>Master the NEET Syllabus with Precision</h2>
+                <p>This comprehensive PDF tracker is designed specifically for NEET aspirants who want to organize their study plan, monitor progress, and ensure no topic is left unprepared.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Structured Study Plan</h3>
+                            <p>Break down the vast NEET syllabus into manageable daily/weekly targets with our carefully designed tracker.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Progress Monitoring</h3>
+                            <p>Visualize your preparation journey with progress tracking for Physics, Chemistry, and Biology separately.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Revision Scheduling</h3>
+                            <p>Never forget to revise important topics with built-in revision reminders and checkpoints.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whats-included">
+                    <h3>What's Included in the PDF:</h3>
+                    <ul class="included-list">
+                        <li>Complete NEET syllabus breakdown (Physics, Chemistry, Biology)</li>
+                        <li>Topic-wise tracking sheets with status indicators</li>
+                        <li>Monthly, weekly, and daily study planners</li>
+                        <li>Revision tracker with spaced repetition schedule</li>
+                        <li>Mock test performance log</li>
+                        <li>Important formulas and concepts checklist</li>
+                        <li>Printable format - use digitally or print physically</li>
+                    </ul>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"This syllabus tracker completely transformed my NEET preparation. I was able to cover everything systematically and knew exactly which topics needed more attention. Worth every rupee!"</p>
+                    <div class="testimonial-author">- Priya Sharma, NEET 2023 Aspirant</div>
+                </div>
+                
+                <div class="guarantee">
+                    <h3><i class="fas fa-shield-alt"></i> Satisfaction Guarantee</h3>
+                    <p>If you're not satisfied with the NEET Syllabus Tracker PDF, contact us within 7 days for a full refund. No questions asked.</p>
+                </div>
+            </div>
+            
+            <div class="payment-section">
+                <div class="price">₹49</div>
+                <p class="price-note">One-time payment. No hidden fees. Instant access.</p>
+                
+                <div class="payment-button-container">
+                    <!-- Razorpay Payment Button -->
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RmVAhbKLbD11va" async> </script>
+                    </form>
+                </div>
+                
+                <p><i class="fas fa-lock"></i> Secure payment powered by Razorpay</p>
+                <p><i class="fas fa-download"></i> Instant download after payment</p>
+                <p><i class="fas fa-mobile-alt"></i> Compatible with all devices</p>
+                
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>How will I receive the PDF after payment?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Immediately after successful payment, you'll be redirected to a download page where you can download the NEET Syllabus Tracker PDF. You'll also receive a download link via email.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>Can I use this on my phone and computer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! The PDF is compatible with all devices. You can view it on your phone, tablet, or computer. You can also print it if you prefer a physical copy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>Is this updated for NEET 2024 syllabus?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! The tracker is based on the latest NEET syllabus and includes all topics from Physics, Chemistry, and Biology as prescribed by NTA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 NEET Preparation Tools. All rights reserved.</p>
+            <p>This is a digital product. No physical item will be shipped.</p>
+            <p>For support, email: support@neetpreptools.com</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle FAQ answers
+        function toggleAnswer(element) {
+            const answer = element.parentElement.querySelector('.faq-answer');
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+        
+        // Open all FAQs by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+            
+            const faqIcons = document.querySelectorAll('.faq-question i');
+            faqIcons.forEach(icon => {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            });
+        });
+        
+        // Simulate payment button styling
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would normally be handled by Razorpay's script
+            // We're just ensuring the button container has minimum height
+            const buttonContainer = document.querySelector('.payment-button-container');
+            const checkButton = setInterval(function() {
+                const razorpayButton = document.querySelector('.razorpay-embed-btn');
+                if (razorpayButton) {
+                    razorpayButton.innerHTML = '<i class="fas fa-bolt"></i> Buy Now for ₹49';
+                    clearInterval(checkButton);
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
